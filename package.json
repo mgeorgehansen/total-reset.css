@@ -1,19 +1,27 @@
 {
   "name": "total-reset",
   "version": "0.1.0",
-  "description": "A semantic CSS reset that goes all the way.",
+  "description": "A semantic CSS reset that goes all the way",
+  "license": "MPL-2.0",
   "keywords": [
     "css",
-    "reset"
+    "reset",
+    "semantic"
   ],
+  "author": "M. George Hansen <technopolitica@gmail.com>",
+  "homepage": "https://github.com/mgeorgehansen/total-reset.css",
+  "repository": "mgeorgehansen/total-reset.css",
+  "bugs": "https://github.com/mgeorgehansen/total-reset.css/issues",
   "main": "dist/total-reset.css",
+  "files": [
+    "dist/total-reset.css",
+    "src/"
+  ],
   "scripts": {
     "prebuild": "npm install",
     "build": "gulp build",
     "serve": "npm run prebuild && gulp serve"
   },
-  "author": "M. George Hansen <technopolitica@gmail.com>",
-  "license": "MPL-2.0",
   "devDependencies": {
     "browser-sync": "^2.9.11",
     "gulp": "^3.9.0",

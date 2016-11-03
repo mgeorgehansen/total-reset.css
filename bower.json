@@ -1,12 +1,25 @@
 {
   "name": "total-reset",
   "version": "0.1.0",
-  "description": "A semantic CSS reset that goes all the way.",
-  "main": "dist/total-reset.css",
+  "description": "A semantic CSS reset that goes all the way",
   "authors": [
     "M. George Hansen <technopolitica@gmail.com>"
   ],
   "license": "MPL-2.0",
+  "keywords": [
+    "css",
+    "reset",
+    "semantic"
+  ],
+  "homepage": "https://github.com/mgeorgehansen/total-reset.css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mgeorgehansen/total-reset.css"
+  },
+  "main": [
+    "dist/total-reset.css",
+    "src/full-reset.sass"
+  ],
   "ignore": [
     "**/.*",
     "node_modules",
