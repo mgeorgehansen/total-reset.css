@@ -18,7 +18,7 @@
   },
   "main": [
     "dist/total-reset.css",
-    "src/full-reset.sass"
+    "src/total-reset.sass"
   ],
   "ignore": [
     "**/.*",
