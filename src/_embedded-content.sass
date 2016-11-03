@@ -1,0 +1,29 @@
+/**
+ * 1. Remove border when inside `a` element in IE 9/10 (from normalize.css).
+ *
+ *    Note: We don't use a parent `a` because it causes the selector to have
+ *    high specificity and makes it difficult to override. `img` shouldn't
+ *    have borders anyway, so no harm no foul.
+ */
+img
+  border: none
+
+/**
+ * 1. Remove borders from iframes. This isn't 1995 any more.
+ */
+iframe
+  border: none /* 1 */
+
+/**
+ * 1. Prevent modern browsers from displaying `audio` without controls.
+ * 2. Remove excess height in iOS 5 devices (from normalize.css).
+ */
+audio:not([controls])
+  display: none /* 1 */
+  height: 0 /* 2 */
+
+/**
+ * Correct overflow not hidden in IE 9/10/11 (from normalize.css).
+ */
+svg:not(:root)
+  overflow: hidden

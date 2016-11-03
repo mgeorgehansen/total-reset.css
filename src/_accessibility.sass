@@ -1,0 +1,23 @@
+/**
+ * 1. Remove the outline on focused elements that all major browers add.
+ *
+ *    Ok, this is going to be *super* controversial but hear me out. Yes,
+ *    accessability on focusable elements is really important and needs to be
+ *    addressed in any design, but the default styling may not work for every
+ *    design. For instance, a site with lots of grays would make the default
+ *    focus outline difficult to see. Rather than try to guess what the best
+ *    focus indicator should be for every design I argue that this is the
+ *    responsibility of the designer to figure out. There is an argument to be
+ *    made for standard and expected behavior, but it is easy enough to add
+ *    a focus outline back in the application styling if that's what you want.
+ */
+:focus
+  outline: none /* 1 */
+
+/**
+ * 1. Remove the underline that Firefox adds to elements with a title.
+ *
+ *    Again, this might be controversal but see the comments on :focus above.
+ */
+[title]
+  text-decoration: none /* 1 */

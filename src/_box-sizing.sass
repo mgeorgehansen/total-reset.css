@@ -1,0 +1,14 @@
+/**
+ * 1. Reset box-sizing on all elements to border-box.
+ *
+ *    This uses Jon Neal's method of setting the default box-sizing on the root
+ *    html element and then having all other elements inherit box-sizing
+ *    (https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/).
+ *    This method seems to cause the least number of headaches and override
+ *    issues.
+ */
+html
+  box-sizing: border-box /* 1 */
+
+*, *::before, *::after
+  box-sizing: inherit /* 1 */

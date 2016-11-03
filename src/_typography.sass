@@ -1,0 +1,85 @@
+/**
+ * 1. Prevent iOS and IE text size adjust after device orientation change
+ *    without disabling user zoom.
+ */
+html
+  -ms-text-size-adjust: 100% /* 1 */
+  -webkit-text-size-adjust: 100% /* 1 */
+
+/**
+ * 1. Remove all styling from `h1-6` elements.
+ */
+h1, h2, h3, h4, h5, h6
+  margin: 0 /* 1 */
+  font-size: inherit /* 1 */
+  font-weight: inherit /* 1 */
+
+/**
+ * 1. Remove extra margin around these elements.
+ */
+p, dl, dd, pre, figure, blockquote
+  margin: 0 /* 1 */
+
+/**
+ * 1. Ensure that these elements inherit font-style.
+ */
+i, cite, em, var, address, dfn
+  font-style: inherit /* 1 */
+
+/**
+ * 1. Ensure that these elements inherit text-decoration.
+ */
+u, s, strike, del, ins
+  text-decoration: inherit /* 1 */
+
+/**
+ * 1. Ensure that these elements inherit font-weight.
+ */
+dfn, strong, th, b
+  font-weight: inherit /* 1 */
+
+small
+  font-size: inherit
+
+/**
+ * 1. Ensure that font-family is inherited.
+ * 2. Inherit font size in IE.
+ */
+tt, code, kbd, samp, pre
+  font-family: inherit /* 1 */
+  font-size: inherit /* 2 */
+
+/**
+ * 1. Remove quotation marks.
+ */
+q
+  &::before, &::after
+    content: '' /* 1 */
+    content: none /* 1 */
+blockquote, q
+  quotes: none /* 1 */
+
+/**
+ * 1. Reset styling for `mark` elements.
+ */
+mark
+  background-color: inherit /* 1 */
+  color: inherit /* 1 */
+
+hr
+  box-sizing: content-box /* 1 */
+  height: 0 /* 1 */
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers
+ * (from normalize.css).
+ */
+sub, sup
+  font-size: 75%
+  line-height: 0
+  position: relative
+  vertical-align: baseline
+sup
+  top: -0.5em
+sub
+  bottom: -0.25em

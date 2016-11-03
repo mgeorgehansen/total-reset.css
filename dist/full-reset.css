@@ -1,0 +1,387 @@
+/**
+ * 1. Set all visible elements with default inline, inline-block and block to
+ *    display as blocks.
+ *
+ *    This might be controversial, but my position is that inline vs block
+ *    display is a visual style and that block display is the most reasonable
+ *    default for consistent styling. Rather than maintaining a mental map of
+ *    which elements are _supposed_ to be inline vs block you can always rely
+ *    on the fact that *all* elements are block by default. Except checkboxes
+ *    and radios of course, because reasons.
+ */
+button, datalist, form, fieldset, input:not([type="checkbox"]):not([type="radio"]), keygen, label, output, select, textarea {
+  display: block; }
+
+/**
+ * 1. Reset box-sizing on all elements to border-box.
+ *
+ *    This uses Jon Neal's method of setting the default box-sizing on the root
+ *    html element and then having all other elements inherit box-sizing
+ *    (https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/).
+ *    This method seems to cause the least number of headaches and override
+ *    issues.
+ */
+html {
+  box-sizing: border-box; }
+
+*, *::before, *::after {
+  box-sizing: inherit; }
+
+/**
+ * 1. Fully reset link styling.
+ * 2. Remove gray background color from active links in IE 10
+ *    (from normalize.css).
+ */
+a {
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent; }
+  a:link, a:active, a:visited {
+    color: inherit; }
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+  ul ol, ul ul, ol ol, ol ul {
+    padding: 0; }
+
+/**
+ * 1. Prevent iOS and IE text size adjust after device orientation change
+ *    without disabling user zoom.
+ */
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+/**
+ * 1. Remove all styling from `h1-6` elements.
+ */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit; }
+
+/**
+ * 1. Remove extra margin around these elements.
+ */
+p, dl, dd, pre, figure, blockquote {
+  margin: 0; }
+
+/**
+ * 1. Ensure that these elements inherit font-style.
+ */
+i, cite, em, var, address, dfn {
+  font-style: inherit; }
+
+/**
+ * 1. Ensure that these elements inherit text-decoration.
+ */
+u, s, strike, del, ins {
+  text-decoration: inherit; }
+
+/**
+ * 1. Ensure that these elements inherit font-weight.
+ */
+dfn, strong, th, b {
+  font-weight: inherit; }
+
+small {
+  font-size: inherit; }
+
+/**
+ * 1. Ensure that font-family is inherited.
+ * 2. Inherit font size in IE.
+ */
+tt, code, kbd, samp, pre {
+  font-family: inherit;
+  font-size: inherit; }
+
+/**
+ * 1. Remove quotation marks.
+ */
+q::before, q::after {
+  content: "";
+  content: none; }
+
+blockquote, q {
+  quotes: none; }
+
+/**
+ * 1. Reset styling for `mark` elements.
+ */
+mark {
+  background-color: inherit;
+  color: inherit; }
+
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers
+ * (from normalize.css).
+ */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/**
+ * 1. Remove border when inside `a` element in IE 9/10 (from normalize.css).
+ *
+ *    Note: We don't use a parent `a` because it causes the selector to have
+ *    high specificity and makes it difficult to override. `img` shouldn't
+ *    have borders anyway, so no harm no foul.
+ */
+img {
+  border: none; }
+
+/**
+ * 1. Remove borders from iframes. This isn't 1995 any more.
+ */
+iframe {
+  border: none; }
+
+/**
+ * 1. Prevent modern browsers from displaying `audio` without controls.
+ * 2. Remove excess height in iOS 5 devices (from normalize.css).
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11 (from normalize.css).
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/**
+ * 1. Remove the outline on focused elements that all major browers add.
+ *
+ *    Ok, this is going to be *super* controversial but hear me out. Yes,
+ *    accessability on focusable elements is really important and needs to be
+ *    addressed in any design, but the default styling may not work for every
+ *    design. For instance, a site with lots of grays would make the default
+ *    focus outline difficult to see. Rather than try to guess what the best
+ *    focus indicator should be for every design I argue that this is the
+ *    responsibility of the designer to figure out. There is an argument to be
+ *    made for standard and expected behavior, but it is easy enough to add
+ *    a focus outline back in the application styling if that's what you want.
+ */
+:focus {
+  outline: none; }
+
+/**
+ * 1. Remove the underline that Firefox adds to elements with a title.
+ *
+ *    Again, this might be controversal but see the comments on :focus above.
+ */
+[title] {
+  text-decoration: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td, th {
+  padding: 0; }
+
+caption {
+  text-align: inherit; }
+
+html {
+  width: 100%;
+  overflow-x: hidden; }
+
+input:not([type="checkbox"]):not([type="radio"]), select, textarea, button, meter, progress {
+  width: 100%; }
+
+img, video, object, embed, iframe {
+  height: auto;
+  max-width: 100%; }
+
+audio {
+  max-width: 100%; }
+
+/**
+ * 1. Fully reset fieldsets removing all default styling.
+ */
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none; }
+
+/**
+ * 1. Fully reset lengends removing all default styling.
+ * 2. On Android Chrome browser lengends don't expand to 100%, so we fix that.
+ */
+legend {
+  border: 0;
+  padding: 0;
+  width: 100%; }
+
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+input:not([type="checkbox"]):not([type="radio"]),
+optgroup,
+select,
+textarea,
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit; }
+
+/**
+ * 1. Remove border-radius in Safari.
+ * 2. Remove glossy background in Safari.
+ *
+ *    Note that this also removes the dropdown arrow in Safari, which isn't
+ *    ideal but there is little we can do about it.
+ */
+select {
+  border-radius: 0;
+  -webkit-appearance: none; }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11 (from normalize.css).
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Address `overflow` set to `hidden` in IE 8/9/10/11 (from normalize.css).
+ */
+button {
+  overflow: visible; }
+
+/**
+ * 1. Address inconsistent `text-transform` inheritance for `button` and
+ *    `select`. All other form control elements do not inherit `text-transform`
+ *    values. Correct `button` style inheritance in Firefox, IE 8/9/10/11, and
+ *    Opera. Correct `select` style inheritance in Firefox
+ *    (from normalize.css).
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Remove inner padding and border in Firefox 4+ (from normalize.css).
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+  text-align: left; }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
+
+/**
+ * Checkboxes and radio inputs are not styleable in most browsers unfortunately,
+ * so we have to treat them as a special case.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10 (from normalize.css).
+ * 2. Remove excess padding in IE 8/9/10 (from normalize.css).
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome which is
+ *    unstylable (from normalize.css).
+ * 2. Remove inner padding and search cancel button in Safari and Chrome on
+ *    OS X. Safari (but not Chrome) clips the cancel button when the search
+ *    input has padding (and `textfield` appearance) (from normalize.css).
+ *
+ *    Ideally we'd like to support the native cancel button, but unfortunately
+ *    safar
+ *
+ */
+input[type="search"] {
+  -webkit-appearance: textfield; }
+  input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none; }
+
+/**
+ * 1. Update input placeholders to inherit color (IE, Chrome and Safari) and
+ *    opacity (Firefox).
+ *
+ *    Note: On Firefox number inputs do not respect placeholder styling. This is
+ *    a known bug (https://bugzilla.mozilla.org/show_bug.cgi?id=1004130) with no
+ *    workaround :(.
+ */
+::-webkit-input-placeholder {
+  color: inherit; }
+
+::-moz-placeholder {
+  opacity: inherit; }
+
+:-ms-input-placeholder {
+  color: inherit; }
+
+/**
+ * 1. Address `[hidden]` styling not present in IE 8/9/10 and hide the
+ *    `template` element in IE 8/9/10/11, Safari, and Firefox < 22
+ *    (from normalize.css).
+ */
+[hidden],
+template {
+  display: none; }
+
+/**
+ * 1. Remove default padding on body.
+ * 2. Normalize line-height.
+ */
+body {
+  margin: 0;
+  line-height: 1; }

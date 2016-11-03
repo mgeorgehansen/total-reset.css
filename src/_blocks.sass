@@ -1,0 +1,20 @@
+/**
+ * 1. Set all visible elements with default inline, inline-block and block to
+ *    display as blocks.
+ *
+ *    This might be controversial, but my position is that inline vs block
+ *    display is a visual style and that block display is the most reasonable
+ *    default for consistent styling. Rather than maintaining a mental map of
+ *    which elements are _supposed_ to be inline vs block you can always rely
+ *    on the fact that *all* elements are block by default. Except checkboxes
+ *    and radios of course, because reasons.
+ */
+article, aside, div, footer, header, hgroup, main, menu, nav, noscript, section, /* structural elements */
+abbr, acronym, blockquote, h1, h2, h3, h4, h5, h6, p, q, /* phrasing elements */
+b, bdo, em, i, ins, hr, mark, pre, s, small, strike, strong, sub, sup, u, wbr, /* typographic elements */
+a, address, cite, code, dd, dfn, dl, dt, figcaption, figure, kbd, ol, ul, samp, time, var, /* data markup elements */
+rp, rt, ruby, /* language elements */
+details, meter, progress, summary, /* interactive elements */
+audio, canvas, embed, img, svg, video, /* embedded content */
+button, datalist, form, fieldset, input:not([type="checkbox"]):not([type="radio"]), keygen, label, output, select, textarea /* form elements */
+  display: block /* 1 */
