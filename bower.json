@@ -14,7 +14,7 @@
   "homepage": "https://github.com/mgeorgehansen/total-reset.css",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mgeorgehansen/total-reset.css"
+    "url": "git://github.com/mgeorgehansen/total-reset.css.git"
   },
   "main": [
     "dist/total-reset.css",
