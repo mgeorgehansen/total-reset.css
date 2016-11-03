@@ -2,6 +2,8 @@
 
 > A semantic CSS reset that goes all the way.
 
+[![npm][npm-image]][npm-url] [![license][license-image]][license-url]
+
 total-reset.css takes the cross-browser fixes from the venerable normalize.css
 but removes all of the opinionated base element styling, sets _all elements_ to
 `display: block` and `box-sizing: border-box`, and generally tries to provide a
@@ -90,3 +92,8 @@ to your semantics.
 * [Chris Bracco](https://github.com/cbracco) for his excellent
   [html5-test-page](https://github.com/cbracco/html5-test-page), which was used
   to test all of the reset styles for total-reset.css.
+
+[license-image]: https://img.shields.io/npm/l/total-reset.svg?style=flat-square
+[license-url]: LICENSE.md
+[npm-image]: https://img.shields.io/npm/v/total-reset.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/total-reset
