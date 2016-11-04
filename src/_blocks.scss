@@ -16,5 +16,6 @@ a, address, cite, code, dd, dfn, dl, dt, figcaption, figure, kbd, ol, ul, samp, 
 rp, rt, ruby, /* language elements */
 details, meter, progress, summary, /* interactive elements */
 audio, canvas, embed, img, svg, video, /* embedded content */
-button, datalist, form, fieldset, input:not([type="checkbox"]):not([type="radio"]), keygen, label, output, select, textarea /* form elements */
-  display: block /* 1 */
+button, datalist, form, fieldset, input:not([type="checkbox"]):not([type="radio"]), keygen, label, output, select, textarea /* form elements */ {
+  display: block; /* 1 */
+}

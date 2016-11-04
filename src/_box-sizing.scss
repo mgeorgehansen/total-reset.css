@@ -7,8 +7,10 @@
  *    This method seems to cause the least number of headaches and override
  *    issues.
  */
-html
-  box-sizing: border-box /* 1 */
+html {
+  box-sizing: border-box;
+}
 
-*, *::before, *::after
-  box-sizing: inherit /* 1 */
+*, *::before, *::after {
+  box-sizing: inherit;
+}
