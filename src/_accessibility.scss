@@ -11,13 +11,15 @@
  *    made for standard and expected behavior, but it is easy enough to add
  *    a focus outline back in the application styling if that's what you want.
  */
-:focus
-  outline: none /* 1 */
+:focus {
+  outline: none;
+}
 
 /**
  * 1. Remove the underline that Firefox adds to elements with a title.
  *
  *    Again, this might be controversal but see the comments on :focus above.
  */
-[title]
-  text-decoration: none /* 1 */
+[title] {
+  text-decoration: none;
+}

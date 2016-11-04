@@ -1,19 +1,21 @@
 /**
  * 1. Fully reset fieldsets removing all default styling.
  */
-fieldset
-  margin: 0 /* 1 */
-  padding: 0 /* 1 */
-  border: none /* 1 */
+fieldset {
+  margin: 0; /* 1 */
+  padding: 0; /* 1 */
+  border: none; /* 1 */
+}
 
 /**
  * 1. Fully reset lengends removing all default styling.
  * 2. On Android Chrome browser lengends don't expand to 100%, so we fix that.
  */
-legend
-  border: 0 /* 1 */
-  padding: 0 /* 1 */
-  width: 100% /* 2 */
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 1 */
+  width: 100%; /* 2 */
+}
 
 /**
  * Known limitation: by default, Chrome and Safari on OS X allow very limited
@@ -23,13 +25,14 @@ input:not([type="checkbox"]):not([type="radio"]),
 optgroup,
 select,
 textarea,
-button
-  margin: 0
-  padding: 0
-  border: none
-  background: none
-  font: inherit
-  color: inherit
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+}
 
 /**
  * 1. Remove border-radius in Safari.
@@ -38,21 +41,24 @@ button
  *    Note that this also removes the dropdown arrow in Safari, which isn't
  *    ideal but there is little we can do about it.
  */
-select
-  border-radius: 0 /* 1 */
-  -webkit-appearance: none /* 2 */
+select {
+  border-radius: 0; /* 1 */
+  -webkit-appearance: none; /* 2 */
+}
 
 /**
  * Remove default vertical scrollbar in IE 8/9/10/11 (from normalize.css).
  */
-textarea
-  overflow: auto
+textarea {
+  overflow: auto;
+}
 
 /**
  * 1. Address `overflow` set to `hidden` in IE 8/9/10/11 (from normalize.css).
  */
-button
-  overflow: visible /* 1 */
+button {
+  overflow: visible; /* 1 */
+}
 
 /**
  * 1. Address inconsistent `text-transform` inheritance for `button` and
@@ -62,17 +68,20 @@ button
  *    (from normalize.css).
  */
 button,
-select
-  text-transform: none /* 1 */
+select {
+  text-transform: none; /* 1 */
+}
 
 /**
  * 1. Remove inner padding and border in Firefox 4+ (from normalize.css).
  */
 button,
-input
-  &::-moz-focus-inner
-    border: 0 /* 1 */
-    padding: 0 /* 1 */
+input {
+  &::-moz-focus-inner {
+    border: 0; /* 1 */
+    padding: 0; /* 1 */
+  }
+}
 
 /**
  * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
@@ -82,26 +91,29 @@ input
  *    `input` and others.
  */
 button,
-html input[type="button"] /* 1 */,
+html input[type="button"], /* 1 */
 input[type="submit"],
-input[type="reset"]
-  -webkit-appearance: button /* 2 */
-  cursor: pointer /* 3 */
-  text-align: left
+input[type="reset"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+  text-align: left;
+}
 
 /**
  * Re-set default cursor for disabled elements.
  */
 button[disabled],
-html input[disabled]
-  cursor: default
+html input[disabled] {
+  cursor: default;
+}
 
 /**
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-input
-  line-height: normal
+input {
+  line-height: normal;
+}
 
 /**
  * Checkboxes and radio inputs are not styleable in most browsers unfortunately,
@@ -111,19 +123,22 @@ input
  * 2. Remove excess padding in IE 8/9/10 (from normalize.css).
  */
 input[type="checkbox"],
-input[type="radio"]
-  box-sizing: border-box /* 1 */
-  padding: 0 /* 2 */
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
 
 /**
  * Fix the cursor style for Chrome's increment/decrement buttons. For certain
  * `font-size` values of the `input`, it causes the cursor style of the
  * decrement button to change from `default` to `text`.
  */
-input[type="number"]
+input[type="number"] {
   &::-webkit-inner-spin-button,
-  &::-webkit-outer-spin-button
-    height: auto
+  &::-webkit-outer-spin-button {
+    height: auto;
+  }
+}
 
 /**
  * 1. Address `appearance` set to `searchfield` in Safari and Chrome which is
@@ -136,12 +151,14 @@ input[type="number"]
  *    safar
  *
  */
-input[type="search"]
-  -webkit-appearance: textfield /* 1 */
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
 
   &::-webkit-search-cancel-button,
-  &::-webkit-search-decoration
-    -webkit-appearance: none /* 2 */
+  &::-webkit-search-decoration {
+    -webkit-appearance: none; /* 2 */
+  }
+}
 
 /**
  * 1. Update input placeholders to inherit color (IE, Chrome and Safari) and
@@ -151,9 +168,12 @@ input[type="search"]
  *    a known bug (https://bugzilla.mozilla.org/show_bug.cgi?id=1004130) with no
  *    workaround :(.
  */
-::-webkit-input-placeholder
-   color: inherit /* 1 */
-::-moz-placeholder
-   opacity: inherit /* 1 */
-:-ms-input-placeholder
-   color: inherit /* 1 */
+::-webkit-input-placeholder {
+  color: inherit; /* 1 */
+}
+::-moz-placeholder {
+  opacity: inherit; /* 1 */
+}
+:-ms-input-placeholder {
+  color: inherit; /* 1 */
+};

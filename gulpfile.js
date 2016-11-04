@@ -9,7 +9,7 @@ var distDir = 'dist';
 var srcDir = 'src';
 
 gulp.task('build', function() {
-  return gulp.src(srcDir + '/**/[^_]*.sass')
+  return gulp.src(srcDir + '/**/[^_]*.scss')
     .pipe(gulpSass()).on('error', gulpSass.logError)
     .pipe(gulp.dest(distDir))
     .pipe(browserSync.stream())
@@ -32,7 +32,7 @@ gulp.task('serve', ['build'], function() {
   });
 
   gulp.watch('test/**/*.html').on('change', browserSync.reload);
-  gulp.watch(srcDir + '/**/*.sass', ['build']);
+  gulp.watch(srcDir + '/**/*.scss', ['build']);
 });
 
 gulp.task('default', ['build'])

@@ -9,8 +9,16 @@
  *    on the fact that *all* elements are block by default. Except checkboxes
  *    and radios of course, because reasons.
  */
+article, aside, div, footer, header, hgroup, main, menu, nav, noscript, section,
+abbr, acronym, blockquote, h1, h2, h3, h4, h5, h6, p, q,
+b, bdo, em, i, ins, hr, mark, pre, s, small, strike, strong, sub, sup, u, wbr,
+a, address, cite, code, dd, dfn, dl, dt, figcaption, figure, kbd, ol, ul, samp, time, var,
+rp, rt, ruby,
+details, meter, progress, summary,
+audio, canvas, embed, img, svg, video,
 button, datalist, form, fieldset, input:not([type="checkbox"]):not([type="radio"]), keygen, label, output, select, textarea {
-  display: block; }
+  display: block;
+  /* 1 */ }
 
 /**
  * 1. Reset box-sizing on all elements to border-box.
@@ -34,10 +42,14 @@ html {
  */
 a {
   color: inherit;
+  /* 1 */
   text-decoration: none;
-  background-color: transparent; }
+  /* 1 */
+  background-color: transparent;
+  /* 2 */ }
   a:link, a:active, a:visited {
-    color: inherit; }
+    color: inherit;
+    /* 1 */ }
 
 ul, ol {
   margin: 0;
@@ -52,39 +64,48 @@ ul, ol {
  */
 html {
   -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%; }
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 1 */ }
 
 /**
  * 1. Remove all styling from `h1-6` elements.
  */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
+  /* 1 */
   font-size: inherit;
-  font-weight: inherit; }
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */ }
 
 /**
  * 1. Remove extra margin around these elements.
  */
 p, dl, dd, pre, figure, blockquote {
-  margin: 0; }
+  margin: 0;
+  /* 1 */ }
 
 /**
  * 1. Ensure that these elements inherit font-style.
  */
 i, cite, em, var, address, dfn {
-  font-style: inherit; }
+  font-style: inherit;
+  /* 1 */ }
 
 /**
  * 1. Ensure that these elements inherit text-decoration.
  */
 u, s, strike, del, ins {
-  text-decoration: inherit; }
+  text-decoration: inherit;
+  /* 1 */ }
 
 /**
  * 1. Ensure that these elements inherit font-weight.
  */
 dfn, strong, th, b {
-  font-weight: inherit; }
+  font-weight: inherit;
+  /* 1 */ }
 
 small {
   font-size: inherit; }
@@ -95,24 +116,31 @@ small {
  */
 tt, code, kbd, samp, pre {
   font-family: inherit;
-  font-size: inherit; }
+  /* 1 */
+  font-size: inherit;
+  /* 2 */ }
 
 /**
  * 1. Remove quotation marks.
  */
 q::before, q::after {
   content: "";
-  content: none; }
+  /* 1 */
+  content: none;
+  /* 1 */ }
 
 blockquote, q {
-  quotes: none; }
+  quotes: none;
+  /* 1 */ }
 
 /**
  * 1. Reset styling for `mark` elements.
  */
 mark {
   background-color: inherit;
-  color: inherit; }
+  /* 1 */
+  color: inherit;
+  /* 1 */ }
 
 hr {
   box-sizing: content-box;
@@ -148,7 +176,8 @@ img {
  * 1. Remove borders from iframes. This isn't 1995 any more.
  */
 iframe {
-  border: none; }
+  border: none;
+  /* 1 */ }
 
 /**
  * 1. Prevent modern browsers from displaying `audio` without controls.
@@ -156,7 +185,9 @@ iframe {
  */
 audio:not([controls]) {
   display: none;
-  height: 0; }
+  /* 1 */
+  height: 0;
+  /* 2 */ }
 
 /**
  * Correct overflow not hidden in IE 9/10/11 (from normalize.css).
@@ -217,8 +248,11 @@ audio {
  */
 fieldset {
   margin: 0;
+  /* 1 */
   padding: 0;
-  border: none; }
+  /* 1 */
+  border: none;
+  /* 1 */ }
 
 /**
  * 1. Fully reset lengends removing all default styling.
@@ -226,8 +260,11 @@ fieldset {
  */
 legend {
   border: 0;
+  /* 1 */
   padding: 0;
-  width: 100%; }
+  /* 1 */
+  width: 100%;
+  /* 2 */ }
 
 /**
  * Known limitation: by default, Chrome and Safari on OS X allow very limited
@@ -254,7 +291,9 @@ button {
  */
 select {
   border-radius: 0;
-  -webkit-appearance: none; }
+  /* 1 */
+  -webkit-appearance: none;
+  /* 2 */ }
 
 /**
  * Remove default vertical scrollbar in IE 8/9/10/11 (from normalize.css).
@@ -266,7 +305,8 @@ textarea {
  * 1. Address `overflow` set to `hidden` in IE 8/9/10/11 (from normalize.css).
  */
 button {
-  overflow: visible; }
+  overflow: visible;
+  /* 1 */ }
 
 /**
  * 1. Address inconsistent `text-transform` inheritance for `button` and
@@ -277,7 +317,8 @@ button {
  */
 button,
 select {
-  text-transform: none; }
+  text-transform: none;
+  /* 1 */ }
 
 /**
  * 1. Remove inner padding and border in Firefox 4+ (from normalize.css).
@@ -285,7 +326,9 @@ select {
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
-  padding: 0; }
+  /* 1 */
+  padding: 0;
+  /* 1 */ }
 
 /**
  * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
@@ -299,7 +342,9 @@ html input[type="button"],
 input[type="submit"],
 input[type="reset"] {
   -webkit-appearance: button;
+  /* 2 */
   cursor: pointer;
+  /* 3 */
   text-align: left; }
 
 /**
@@ -326,7 +371,9 @@ input {
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
-  padding: 0; }
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
 
 /**
  * Fix the cursor style for Chrome's increment/decrement buttons. For certain
@@ -348,9 +395,11 @@ input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-o
  *
  */
 input[type="search"] {
-  -webkit-appearance: textfield; }
+  -webkit-appearance: textfield;
+  /* 1 */ }
   input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none; }
+    -webkit-appearance: none;
+    /* 2 */ }
 
 /**
  * 1. Update input placeholders to inherit color (IE, Chrome and Safari) and
@@ -361,13 +410,16 @@ input[type="search"] {
  *    workaround :(.
  */
 ::-webkit-input-placeholder {
-  color: inherit; }
+  color: inherit;
+  /* 1 */ }
 
 ::-moz-placeholder {
-  opacity: inherit; }
+  opacity: inherit;
+  /* 1 */ }
 
 :-ms-input-placeholder {
-  color: inherit; }
+  color: inherit;
+  /* 1 */ }
 
 /**
  * 1. Address `[hidden]` styling not present in IE 8/9/10 and hide the
@@ -376,7 +428,8 @@ input[type="search"] {
  */
 [hidden],
 template {
-  display: none; }
+  display: none;
+  /* 1 */ }
 
 /**
  * 1. Remove default padding on body.
@@ -384,4 +437,6 @@ template {
  */
 body {
   margin: 0;
-  line-height: 1; }
+  /* 1 */
+  line-height: 1;
+  /* 2 */ }
